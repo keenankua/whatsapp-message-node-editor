@@ -1,0 +1,317 @@
+@use "../utils/_variables";
+
+.editing-sidebar {
+  width: 360px;
+  min-width: 360px;
+  letter-spacing: 0.15px;
+  max-height: 100%;
+
+  &.MuiCard-root {
+    overflow-y: auto;
+  }
+
+  .editing-sidebar-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .title {
+      font-size: 24px;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+  .editing-sidebar-sections {
+    &.MuiCardContent-root {
+      padding: 0;
+    }
+
+    > *:not(:first-child) {
+      margin-top: 24px;
+    }
+
+    .content-header {
+      font-size: 16px;
+      text-align: left;
+      font-weight: 500;
+      margin: 0 0 16px 0;
+    }
+
+    .card-section {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 24px;
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+
+        .text-input-wrapper {
+          width: 100%;
+          position: relative;
+          margin-top: 16px;
+
+          .option-button-label {
+            color: variables.$dark-grey;
+            font-weight: 500;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+
+            .delete-button {
+              padding: 0;
+
+              .delete-icon {
+                color: variables.$med-grey;
+              }
+            }
+          }
+
+          .option-button-input {
+            width: 100%;
+
+            .MuiInputBase-input {
+              padding: 12px 52px 12px 12px;
+            }
+          }
+
+          .character-count {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(50%);
+            font-size: 14px;
+            color: variables.$med-grey;
+          }
+        }
+
+        &.header-content {
+          width: 264px;
+
+          .header-type-select {
+            width: 100%;
+          }
+
+          .image-size-rec {
+            font-size: 12px;
+            color: variables.$med-grey;
+            margin: 10px 0;
+          }
+        }
+
+        .multiline-text-input-wrapper {
+          width: 100%;
+          margin-top: 16px;
+          position: relative;
+
+          .multiline-text-input {
+            width: 100%;
+
+            .MuiInputBase-root {
+              padding: 12px 12px 43px;
+              box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            }
+          }
+
+          .character-count {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            font-size: 14px;
+            color: variables.$med-grey;
+          }
+        }
+
+        &.body-message-content {
+          .body-message-buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 12px;
+            margin-bottom: 8px;
+
+            .text-formatting-buttons {
+              > * {
+                padding: 0;
+                margin-left: 8px;
+              }
+
+              .text-formatting-icon {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .finalize-buttons {
+      > *:not(:first-child) {
+        margin-top: 12px;
+      }
+
+      .finalize-button {
+        width: 100%;
+      }
+    }
+  }
+
+  .close-button {
+    color: variables.$med-grey;
+
+    &.no-padding {
+      padding: 0;
+    }
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .left-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .icon {
+        color: variables.$med-grey;
+      }
+
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 4px 0 8px;
+      }
+
+      .error-icon {
+        color: rgba(0, 0, 0, 0.38);
+        font-size: 14px;
+      }
+
+      .required-label {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        background-color: variables.$light-grey;
+        padding: 4px 8px;
+        margin-left: 8px;
+        border-radius: 4px;
+        line-height: 1.66;
+      }
+    }
+  }
+
+  .tip-card {
+    text-align: left;
+    padding: 16px;
+    background-color: variables.$light-grey;
+    box-shadow: none;
+    margin-top: 16px;
+
+    .tip-card-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .left-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .highlight-icon {
+          color: #212121;
+          font-size: 20px;
+        }
+
+        .title {
+          margin-left: 6px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .tip-card-content {
+      color: variables.$med-grey;
+      padding: 0;
+      font-size: 12px;
+      letter-spacing: 0.15px;
+      line-height: 1.43;
+
+      .tip-body {
+        margin: 4px 0;
+      }
+
+      .learn-more-button {
+        text-transform: none;
+        font-weight: normal;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .MuiPaper-root {
+    border-radius: 10px;
+  }
+
+  .MuiInputBase-root {
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+  .MuiButtonBase-root {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+
+    &.MuiButton-outlined {
+      padding: 4px 10px;
+      color: variables.$primary-colour;
+    }
+
+    &.MuiButton-contained {
+      background-color: variables.$primary-colour;
+      box-shadow: none;
+
+      &:hover {
+        background-color: darken(variables.$primary-colour, 10%);
+      }
+    }
+
+    &.MuiButton-text {
+      padding: 0;
+      color: variables.$primary-colour;
+      text-decoration: underline 0.1em rgba(255, 255, 255, 0);
+      transition: text-decoration-color 300ms;
+
+      &:hover {
+        text-decoration-color: variables.$primary-colour;
+        background: none;
+      }
+    }
+
+    &.MuiSwitch-switchBase {
+      &.Mui-checked {
+        color: variables.$primary-colour;
+
+        + .MuiSwitch-track {
+          background-color: #9eceff;
+        }
+      }
+    }
+  }
+
+  .MuiSelect-select {
+    text-align: left;
+    padding: 12px 32px 12px 12px;
+  }
+}
